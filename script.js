@@ -1,6 +1,6 @@
 let words = document.querySelectorAll('.word');
 words.forEach(word => {
-    let letters = word.textContent.split(''); 
+    let letters = word.textContent.split('');
     word.textContent = '';
     letters.forEach(letter => {
         let span = document.createElement('span');
@@ -90,10 +90,10 @@ document.getElementById('loginForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const email = document.getElementById('loginEmail').value;
     const password = document.getElementById('loginPassword').value;
-    
+
     // Here you would typically send this to your backend
     console.log('Login attempt:', { email, password });
-    
+
     // For demo purposes, just show an alert
     alert('Login functionality would be implemented here');
     loginModal.style.display = 'none';
@@ -105,18 +105,20 @@ document.getElementById('signupForm').addEventListener('submit', (e) => {
     const email = document.getElementById('signupEmail').value;
     const password = document.getElementById('signupPassword').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
-    
+
     if (password !== confirmPassword) {
         alert('Passwords do not match!');
         return;
     }
-    
+
     // Here you would typically send this to your backend
     console.log('Signup attempt:', { name, email, password });
-    
+
     // For demo purposes, just show an alert
     alert('Signup functionality would be implemented here');
     signupModal.style.display = 'none';
 });
 
-    
+
+//mix it up portfolio section
+var mixer = mixitup('.portfolio-gallery');
