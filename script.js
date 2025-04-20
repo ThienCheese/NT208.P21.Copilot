@@ -121,4 +121,13 @@ document.getElementById('signupForm').addEventListener('submit', (e) => {
 
 
 //mix it up portfolio section
-var mixer = mixitup('.portfolio-gallery');
+var mixer = mixitup('.portfolio-gallery', {
+    selectors: {
+        target: '.mix'
+    },
+    animation: {
+        duration: 500,
+        effects: 'fade translateZ(-100px)',
+        easing: 'ease'
+    }
+});
