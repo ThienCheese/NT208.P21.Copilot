@@ -36,13 +36,25 @@ body{
     color: var(--text-color);
 }
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     padding: 2rem 9%;
+    transition: all 0.3s ease;
 }
 
+
+header.sticky{
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--second-bg-color);
+   padding: 12px 10%;
+}
 .logo{
     font-size: var(--big-font);
     color: var(--text-color);
@@ -71,6 +83,11 @@ span{
     text-shadow: var(--font-neon-text-shadow);
 }
 
+.navlist a.active{
+    color: var(--hover-color);
+    text-shadow: var(--font-neon-text-shadow);
+}
+
 #menu-icon{
     font-size: 1.8rem;
     z-index: 10001;
@@ -82,6 +99,15 @@ span{
     border-radius: 0.5rem;
     color: var(--second-bg-color);
     display: none;
+    transition: all 0.3s ease;
+}
+
+#menu-icon.bx-x {
+    transform: rotate(180deg);
+    background: var(--bg-color);
+    color: var(--hover-color);
+    border: 2px solid var(--hover-color);
+    box-shadow: var(--neon-box-shadow);
 }
 
 section{
@@ -526,7 +552,7 @@ a.btn:nth-child(2)::before{
     text-align: center;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .fillter-buttons .btn{
@@ -534,18 +560,20 @@ a.btn:nth-child(2)::before{
     outline: none;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 0.5px;
     color: var(--text-color);
     padding: 0.5rem 1rem;
     position: relative;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fillter-buttons .btn:hover,
 .fillter-buttons .btn.mixitup-control-active{
     color: var(--hover-color);
+    text-shadow: 0 0 8px var(--hover-color);
+    transform: translateY(-2px);
 }
 
 .fillter-buttons .btn.mixitup-control-active::after {
@@ -558,7 +586,20 @@ a.btn:nth-child(2)::before{
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: 0 0 10px var(--hover-color);
+    box-shadow: 0 0 15px var(--hover-color);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px var(--hover-color);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--hover-color);
+    }
+    100% {
+        box-shadow: 0 0 5px var(--hover-color);
+    }
 }
 
 .portfolio-gallery{
@@ -577,7 +618,8 @@ a.btn:nth-child(2)::before{
     height: 250px;
     border: 2px solid var(--hover-color);
     box-shadow: var(--neon-box-shadow);
-    transition: transform 0.4s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    opacity: 1; /* Đảm bảo hiển thị ban đầu */
 }
 
 .port-image{
@@ -593,8 +635,9 @@ a.btn:nth-child(2)::before{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     filter: brightness(0.8);
+    will-change: transform;
 }
 
 .port-content{
@@ -610,11 +653,14 @@ a.btn:nth-child(2)::before{
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     padding: 2rem;
+    transform: translateY(5px); /* Giảm khoảng cách transform */
+    will-change: opacity, transform;
 }
 .port-box:hover .port-content{
     opacity: 1;
+    transform: translateY(0);
 }
 
 .port-box:hover .port-image img{
@@ -622,8 +668,11 @@ a.btn:nth-child(2)::before{
 }
 
 .port-box:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 0 25px var(--hover-color);
 }
+
+/* Xóa bỏ các style liên quan đến MixItUp */
 
 .port-content h3{
     font-size: 1.5rem;
@@ -664,11 +713,15 @@ a.btn:nth-child(2)::before{
     font-size: 1.2rem;
 }
 
-/* Media Queries for Portfolio */
+/* Media Queries */
 @media (max-width: 1200px) {
     .portfolio-gallery {
         grid-template-columns: repeat(3, 1fr);
         padding: 0 2rem;
+    }
+
+    header {
+        padding: 1.5rem 5%;
     }
 }
 
@@ -677,9 +730,52 @@ a.btn:nth-child(2)::before{
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
+
+    .fillter-buttons {
+        gap: 1rem;
+    }
+
+    .fillter-buttons .btn {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 768px) {
+    header {
+        padding: 1.2rem 5%;
+    }
+
+    #menu-icon {
+        display: block;
+        margin-left: 0;
+    }
+
+    .navlist {
+        position: absolute;
+        top: -1000px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 5%;
+        background: var(--bg-color);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        z-index: 1000;
+        transition: all .45s ease;
+        display: block;
+    }
+
+    .navlist.active {
+        top: 100%;
+    }
+
+    .navlist li {
+        margin: 1.5rem 0;
+    }
+
+    .navlist a {
+        font-size: 1.2rem;
+        display: block;
+    }
+
     .portfolio-gallery {
         grid-template-columns: 1fr;
         max-width: 400px;
@@ -688,10 +784,18 @@ a.btn:nth-child(2)::before{
 
     .fillter-buttons {
         flex-wrap: wrap;
+        gap: 0.8rem;
     }
 
     .port-box {
         height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fillter-buttons .btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
     }
 }
 
