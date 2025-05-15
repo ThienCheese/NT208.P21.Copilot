@@ -264,3 +264,34 @@ window.addEventListener("scroll", function(){
         header.classList.toggle("sticky", window.scrollY > 50);
 
 })
+
+// Auto set percent for Skills bar
+window.onload = () => {
+    const skills = document.querySelectorAll('.skills .skill-bar');
+    skills.forEach(bar => {
+        const percentage = bar.querySelector('.percent').innerText;
+        const skillBar = bar.querySelector('.bar span')
+        skillBar.style.width = percentage;
+        skillBar.style.animation = `${skillBar.classList[0]} ${parseInt(percentage) / 25}s`;
+    });
+};
+
+// Circle skills
+const circleSkills = document.querySelectorAll('.skill-right .professional .box .circle');
+circleSkills.forEach(circle => {
+    const dots = circle.getAttribute('data-dots');
+    const marked = circle.getAttribute('data-percent');
+    const percent = Math.floor(dots * marked / 100);
+    let points = "";
+    const rotate = 360 / dots;
+    
+    for (let i = 0; i < dots; ++i) {
+        points += `<div class="points" style="--i:${i}; --rot:${rotate}deg;"></div>`;
+    }
+    circle.innerHTML = points;
+
+    const poinstMarked = circle.querySelectorAll('.points');
+    for (let i = 0; i < percent; ++i) {
+        poinstMarked[i].classList.add('marked');
+    }
+});
