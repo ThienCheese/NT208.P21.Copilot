@@ -514,62 +514,118 @@ a.btn:nth-child(2)::before{
 .switch-form a:hover {
     text-shadow: var(--font-neon-text-shadow);
 }
-
+/* --------------------------------------------------------------- */
 /* About Section */
 .about {
-    padding: 100px 10% 90px;
-    background: var(--bg-color);
-}
-
-.about-content {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 4rem;
+    /* padding: 100px 10% 90px; */
+    grid-gap:2em;
+    background: var(--secon-bg-color);
 }
 
-.about-img {
-    flex: 1;
-    position: relative;
+.about .img-about img{
+    max-width: 400;
+    height: auto;
 }
 
-.about-img img {
-    width: 70%;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+.about-content span {
+    color: #fdfdfd;
+    font-size: .8rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
 }
 
-.about-text {
-    flex: 1;
+.about-content h2 {
+    /* display: flex; */
+    color: var(--hover-color);
+    font-size: var(--normal-font);
+    font-weight: 700;
 }
 
-.about-text h3 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
 
-.about-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-}
 
-.skills h4 {
+.about-content h3 {
+    /* display: flex; */
+    /* color: var(--hover-color); */
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-weight: 600;
+    margin-bottom: .2rem;
+
 }
 
-.skill-tags {
+.about-content p {
+    color: #fdfdfd;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+
+
+}
+.about .img-about img {
+    text-align: center;
+    position: relative;
+    /* max-width:400pc; */
+    /* height: auto; */
+}
+
+.img-about span{
+    color:var(--hover-color);
+    font-size: 1rem;
+    font-weight: 600;
+}
+.info-about1,
+.info-about2,
+.info-about3{
+    background: var(--bg-color);
+    font-size: 1rem;
+    position: absolute;
+    padding: 10px;
+    height: 100px;
+    width: 100px;
+    border-radius: 69% 31% 66% 34% / 21% 30% 70% 79%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--neon-box-shadow);
+    border: 1px solid var(--hover-color);
+    outline: 2px solid var(--bg-color);
+    z-index: 100;
+    animation: morph 6s linear infinite;
+
 }
 
-.skill-tags span {
-    padding: 0.5rem 1rem;
-    background: var(--main-color);
-    color: var(--bg-color);
-    border-radius: 20px;
-    font-size: 0.9rem;
+.info-about1 {
+  left: 33%;
+  top: 120%;
+}
+
+.info-about2 {
+  left: 28%;
+  top: 195%;
+}
+
+.info-about3 {
+  left: 55%;
+  top: 150%;
+}    
+@keyframes morph {
+    0%,
+    100%{border-radius: 40% 60% 70% 30%/ 40% 40% 60% 50%};
+    30% {
+        border-radius: 70% 30%  50% 50%/ 30% 30% 70% 70%};
+    
+    60%{
+        border-radius: 100% 60% 60% 100%/ 100% 100% 60% 60%;
+    }
+
+    80%{
+        border-radius: 69% 31% 66% 34%/ 21% 30% 70% 50%;
+    }
 }
 
 /* Services Section */
@@ -640,11 +696,13 @@ a.btn:nth-child(2)::before{
 .info-box i {
     font-size: 2rem;
     color: var(--main-color);
+    margin-right: 15px;
+    /* Đảm bảo icon căn giữa với nội dung */
 }
 
-.info-box h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+.info-box h3, .info-box p {
+    margin: 0;
+    /* Xóa margin mặc định để tránh lệch hàng */
 }
 
 .contact-form {
