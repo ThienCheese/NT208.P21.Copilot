@@ -696,11 +696,13 @@ a.btn:nth-child(2)::before{
 .info-box i {
     font-size: 2rem;
     color: var(--main-color);
+    margin-right: 15px;
+    /* Đảm bảo icon căn giữa với nội dung */
 }
 
-.info-box h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+.info-box h3, .info-box p {
+    margin: 0;
+    /* Xóa margin mặc định để tránh lệch hàng */
 }
 
 .contact-form {
