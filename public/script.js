@@ -186,9 +186,12 @@ document.addEventListener('keydown', (e) => {
 
 const header = document.querySelector('header');
 window.addEventListener("scroll", function(){
-
-        header.classList.toggle("sticky", window.scrollY > 50);
-
+    // Thêm class sticky khi cuộn xuống hơn 50px
+    if (window.scrollY > 50) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
 })
 
 // Auto set percent for Skills bar
