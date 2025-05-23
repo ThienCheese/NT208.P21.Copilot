@@ -1,7 +1,7 @@
 /* --- CSS for main site --- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,7 +12,8 @@
     box-sizing: border-box;
 
 }
-:root{
+
+:root {
     --bg-color: #000a2b;
     --second-bg-color: #292e33;
     --text-color: #f5f5f5;
@@ -22,28 +23,29 @@
     --paragraph-color: #bdbdbd;
     --big-font: 3rem;
     --normal-font: 2rem;
-    --neon-box-shadow:0 0 .5rem #12f7ff;
+    --neon-box-shadow: 0 0 .5rem #12f7ff;
     --h2-font: 3rem;
-    --font-neon-text-shadow:0 0 10px rgba(18,247,255,0.5),
-    0 0 20px rgba(18,247,255,0.5),
-    0 0 30px rgba(18,247,255,0.5),
-    0 0 40px rgba(18,247,255,0.5),
-    0 0 70px rgba(18,247,255,0.5),
-    0 0 80px rgba(18,247,255,0.5),
-    0 0 100px rgba(18,247,255,0.5),
-    0 0 150px rgba(18,247,255,0.5);
+    --font-neon-text-shadow: 0 0 10px rgba(18, 247, 255, 0.5),
+        0 0 20px rgba(18, 247, 255, 0.5),
+        0 0 30px rgba(18, 247, 255, 0.5),
+        0 0 40px rgba(18, 247, 255, 0.5),
+        0 0 70px rgba(18, 247, 255, 0.5),
+        0 0 80px rgba(18, 247, 255, 0.5),
+        0 0 100px rgba(18, 247, 255, 0.5),
+        0 0 150px rgba(18, 247, 255, 0.5);
 }
 .fullscreen {
   width: 100vw;
   height: 100vh;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
 }
-header{
+
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -58,45 +60,49 @@ header{
 }
 
 
-header.sticky{
+header.sticky {
     background: var(--bg-color);
     border-bottom: 1px solid var(--second-bg-color);
-   padding: 12px 10%;
+    padding: 12px 10%;
 }
-.logo{
+
+.logo {
     font-size: var(--big-font);
     color: var(--text-color);
     font-weight: 600;
     cursor: pointer;
     letter-spacing: 1px;
 }
-span{
+
+span {
     color: var(--hover-color);
 }
 
-.navlist{
+.navlist {
     display: flex;
-    list-style:none;
+    list-style: none;
     gap: 2rem;
     justify-content: space-between;
 }
-.navlist a{
+
+.navlist a {
     color: var(--text-color);
     font-size: var(--normal-font);
     font-weight: 600;
     padding: 0.5rem 1.5rem;
 }
-.navlist a:hover{
+
+.navlist a:hover {
     color: var(--hover-color);
     text-shadow: var(--font-neon-text-shadow);
 }
 
-.navlist a.active{
+.navlist a.active {
     color: var(--hover-color);
     text-shadow: var(--font-neon-text-shadow);
 }
 
-#menu-icon{
+#menu-icon {
     font-size: 1.8rem;
     z-index: 10001;
     color: var(--text-color);
@@ -118,11 +124,11 @@ span{
     box-shadow: var(--neon-box-shadow);
 }
 
-section{
+section {
     padding: 100px 10%;
 }
 
-.home{
+.home {
     min-height: 100vh;
     height: 100%;
     width: 100%;
@@ -133,21 +139,23 @@ section{
     justify-content: center;
 }
 
-.home-content{
+.home-content {
     max-width: 600px;
     font-size: var(--normal-font);
 }
 
-.home-content h1{
+.home-content h1 {
     font-size: var(--big-font);
     font-weight: 700;
     line-height: 1.3;
 }
-.home-content a{
+
+.home-content a {
     font-size: var(--normal-font);
-    color:var(--link-color);
+    color: var(--link-color);
 }
-.summary{
+
+.summary {
     font-size: 1.5rem;
     font-weight: 600;
     display: flex;
@@ -156,7 +164,7 @@ section{
     gap: 0.5rem;
 }
 
-.summary h3{
+.summary h3 {
     display: inline-flex;
     vertical-align: top;
     font-size: var(--big-font);
@@ -165,43 +173,48 @@ section{
 
 .summary h3:first-child {
     margin-right: 0.5rem;
-    min-width: 4rem; /* Đảm bảo "I'm a" có đủ không gian */
+    min-width: 4rem;
+    /* Đảm bảo "I'm a" có đủ không gian */
 }
 
 .summary h3:nth-child(2) {
     position: relative;
-    min-height: 3rem; /* Đảm bảo có đủ không gian cho từ animation */
+    min-height: 3rem;
+    /* Đảm bảo có đủ không gian cho từ animation */
 }
 
-.summary h3 .word{
+.summary h3 .word {
     position: absolute;
     display: flex;
     opacity: 0;
     left: 0;
 }
 
-.summary h3 .word .letter{
+.summary h3 .word .letter {
     transform-origin: center center 25px;
 }
-.summary h3 .word .letter.out{
-    transform:  rotateX(90deg);
+
+.summary h3 .word .letter.out {
+    transform: rotateX(90deg);
 }
-.summary h3 .word .letter.in{
+
+.summary h3 .word .letter.in {
     transform: rotateX(0deg);
 }
-.summary h3 .word .letter.behind{
+
+.summary h3 .word .letter.behind {
     transform: rotateX(-90deg);
 }
 
 
 
-.home-content p{
+.home-content p {
     color: var(--paragraph-color);
     line-height: 2;
 }
 
-.home-content .info-box{
-    display: flex;
+.home-content .info-box {
+    display:block;
     flex-direction: column;
     gap: 1rem;
     width: 100%;
@@ -216,21 +229,22 @@ section{
     gap: 0.5rem;
 }
 
-.home-content .info-box i{
+.home-content .info-box i {
     font-size: 2.5rem;
     color: var(--text-color);
     margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
     display: flex;
-    align-items: center;
+    
 }
 
-.home-content .info-box span{
+.home-content .info-box span {
     font-size: var(--normal-font);
     color: var(--text-color);
     font-weight: 500;
 }
 
-.home-content .btn-box{
+.home-content .btn-box {
     display: flex;
     justify-content: flex-start;
     gap: 2rem;
@@ -242,7 +256,7 @@ section{
 
 
 
-.btn-box a.btn{
+.btn-box a.btn {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -262,7 +276,8 @@ section{
     z-index: 1;
     text-align: center;
 }
-a.btn::before{
+
+a.btn::before {
     content: '';
     position: absolute;
     left: 0;
@@ -272,22 +287,25 @@ a.btn::before{
     z-index: -1;
     transition: 0.3s;
 }
-.btn-box a.btn:hover::before{
+
+.btn-box a.btn:hover::before {
     width: 100%;
 }
-.btn-box a.btn:hover{
+
+.btn-box a.btn:hover {
     color: var(--hover-color);
 }
 
-a.btn:nth-child(2){
+a.btn:nth-child(2) {
     background: var(--bg-color);
     color: var(--hover-color);
 }
-a.btn:nth-child(2):hover{
+
+a.btn:nth-child(2):hover {
     color: var(--bg-color);
 }
 
-a.btn:nth-child(2)::before{
+a.btn:nth-child(2)::before {
     background: var(--hover-color);
 }
 
@@ -295,7 +313,7 @@ a.btn:nth-child(2)::before{
 
 
 
-.social-icons{
+.social-icons {
     margin-top: 3rem;
     width: 250px;
     display: flex;
@@ -303,7 +321,8 @@ a.btn:nth-child(2)::before{
     gap: 1.5rem;
     align-items: center;
 }
-.social-icons a{
+
+.social-icons a {
     display: inline-flex;
     width: 50px;
     height: 50px;
@@ -316,15 +335,16 @@ a.btn:nth-child(2)::before{
     color: var(--hover-color);
     transition: 0.5s;
     box-shadow: var(--neon-box-shadow);
-    position: relative; overflow: hidden;
+    position: relative;
+    overflow: hidden;
     z-index: 1;
 }
 
-.social-icons a:hover{
+.social-icons a:hover {
     color: var(--bg-color);
 }
 
-.social-icons a::before{
+.social-icons a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -335,12 +355,13 @@ a.btn:nth-child(2)::before{
     z-index: -1;
     transition: 0.5s;
 }
-.social-icons a:hover::before{
+
+.social-icons a:hover::before {
     width: 100%;
 }
 
 
-.home-img{
+.home-img {
     position: relative;
     width: 100%;
     height: 100%;
@@ -349,7 +370,7 @@ a.btn:nth-child(2)::before{
     align-items: center;
 }
 
-.home-img .img-box{
+.home-img .img-box {
     width: 100%;
     text-align: center;
     height: auto;
@@ -358,7 +379,7 @@ a.btn:nth-child(2)::before{
     z-index: 2;
 }
 
-.home-img .liquid-shape{
+.home-img .liquid-shape {
     position: absolute;
     left: 0;
     width: 100%;
@@ -366,7 +387,8 @@ a.btn:nth-child(2)::before{
     top: 5%;
     z-index: -1;
 }
-.home-img .liquid-shape:nth-child(2){
+
+.home-img .liquid-shape:nth-child(2) {
     position: absolute;
     left: 0;
     width: 100%;
@@ -377,7 +399,7 @@ a.btn:nth-child(2)::before{
     transform: scale(1.5);
 }
 
-.navlist a.nav-btn{
+.navlist a.nav-btn {
     background: var(--hover-color);
     color: var(--second-bg-color);
     padding: 0.5rem 1.5rem;
@@ -386,10 +408,10 @@ a.btn:nth-child(2)::before{
     position: relative;
     overflow: hidden;
     z-index: 1;
-    display: inline-block;
+    display: inline;
 }
 
-.navlist a.nav-btn::before{
+.navlist a.nav-btn::before {
     content: '';
     position: absolute;
     left: 0;
@@ -401,26 +423,26 @@ a.btn:nth-child(2)::before{
     transition: 0.3s;
 }
 
-.navlist a.nav-btn:hover::before{
+.navlist a.nav-btn:hover::before {
     width: 100%;
 }
 
-.navlist a.nav-btn:hover{
+.navlist a.nav-btn:hover {
     color: var(--hover-color);
 }
 
-.navlist a.nav-btn.signup{
+.navlist a.nav-btn.signup {
     background: var(--bg-color);
     color: var(--hover-color);
     border: 2px solid var(--hover-color);
     padding: 0.4rem 1.5rem;
 }
 
-.navlist a.nav-btn.signup:hover{
+.navlist a.nav-btn.signup:hover {
     color: var(--bg-color);
 }
 
-.navlist a.nav-btn.signup::before{
+.navlist a.nav-btn.signup::before {
     background: var(--hover-color);
 }
 
@@ -507,8 +529,8 @@ a.btn:nth-child(2)::before{
     box-shadow: var(--neon-box-shadow);
 }
 
-.form-group input:focus ~ label,
-.form-group input:valid ~ label {
+.form-group input:focus~label,
+.form-group input:valid~label {
     top: -0.5rem;
     left: 0.5rem;
     font-size: 1rem;
@@ -679,7 +701,7 @@ a.btn:nth-child(2)::before{
 }
 
 .skills h4::after {
-    content: '';
+    content: none;
     position: absolute;
     width: 100%;
     height: 3px;
@@ -802,7 +824,8 @@ a.btn:nth-child(2)::before{
 
 .info-box {
     display: flex;
-    align-items: center; /* Căn chỉnh theo giữa */
+    align-items: center;
+    /* Căn chỉnh theo giữa */
     gap: 1rem;
     margin-bottom: 2rem;
 }
@@ -918,6 +941,7 @@ a.btn:nth-child(2)::before{
 
 /* Responsive Design */
 @media (max-width: 991px) {
+
     .about-content,
     .contact-container {
         flex-direction: column;
@@ -985,7 +1009,7 @@ a.btn:nth-child(2)::before{
     text-shadow: var(--font-neon-text-shadow);
 }
 
-.fillter-buttons{
+.fillter-buttons {
     margin: 2rem auto;
     text-align: center;
     display: flex;
@@ -997,7 +1021,7 @@ a.btn:nth-child(2)::before{
     padding: 0 1rem;
 }
 
-.fillter-buttons .btn{
+.fillter-buttons .btn {
     background: none;
     outline: none;
     border: none;
@@ -1012,7 +1036,7 @@ a.btn:nth-child(2)::before{
 }
 
 .fillter-buttons .btn:hover,
-.fillter-buttons .btn.mixitup-control-active{
+.fillter-buttons .btn.mixitup-control-active {
     color: var(--hover-color);
     text-shadow: 0 0 8px var(--hover-color);
     transform: translateY(-2px);
@@ -1036,15 +1060,17 @@ a.btn:nth-child(2)::before{
     0% {
         box-shadow: 0 0 5px var(--hover-color);
     }
+
     50% {
         box-shadow: 0 0 20px var(--hover-color);
     }
+
     100% {
         box-shadow: 0 0 5px var(--hover-color);
     }
 }
 
-.portfolio-gallery{
+.portfolio-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
@@ -1052,7 +1078,7 @@ a.btn:nth-child(2)::before{
     margin: 0 auto;
 }
 
-.port-box{
+.port-box {
     position: relative;
     border-radius: 15px;
     overflow: hidden;
@@ -1061,10 +1087,11 @@ a.btn:nth-child(2)::before{
     border: 2px solid var(--hover-color);
     box-shadow: var(--neon-box-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-    opacity: 1; /* Đảm bảo hiển thị ban đầu */
+    opacity: 1;
+    /* Đảm bảo hiển thị ban đầu */
 }
 
-.port-image{
+.port-image {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1073,7 +1100,7 @@ a.btn:nth-child(2)::before{
     overflow: hidden;
 }
 
-.port-image img{
+.port-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1082,14 +1109,14 @@ a.btn:nth-child(2)::before{
     will-change: transform;
 }
 
-.port-content{
+.port-content {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(18,247,255,0.6));
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(18, 247, 255, 0.6));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1097,15 +1124,17 @@ a.btn:nth-child(2)::before{
     text-align: center;
     transition: opacity 0.3s ease, transform 0.3s ease;
     padding: 2rem;
-    transform: translateY(5px); /* Giảm khoảng cách transform */
+    transform: translateY(5px);
+    /* Giảm khoảng cách transform */
     will-change: opacity, transform;
 }
-.port-box:hover .port-content{
+
+.port-box:hover .port-content {
     opacity: 1;
     transform: translateY(0);
 }
 
-.port-box:hover .port-image img{
+.port-box:hover .port-image img {
     transform: scale(1.1);
 }
 
@@ -1116,23 +1145,24 @@ a.btn:nth-child(2)::before{
 
 /* Xóa bỏ các style liên quan đến MixItUp */
 
-.port-content h3{
+.port-content h3 {
     font-size: 1.5rem;
     font-weight: 600;
     color: #fff;
     margin-bottom: 0.5rem;
-    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-.port-content p{
+.port-content p {
     font-size: 0.9rem;
     margin: 5px 0 15px 0;
     color: #f5f5f5;
     max-width: 90%;
-    display: none; /* Hide paragraph on small screens */
+    display: none;
+    /* Hide paragraph on small screens */
 }
 
-.port-content a{
+.port-content a {
     background: #fff;
     border-radius: 50%;
     display: inline-flex;
@@ -1150,7 +1180,7 @@ a.btn:nth-child(2)::before{
     transform: scale(1.1);
 }
 
-.port-content a i{
+.port-content a i {
     color: var(--second-bg-color);
     font-size: 1.2rem;
 }
@@ -1400,7 +1430,8 @@ a.btn:nth-child(2)::before{
 
     .summary h3 {
         font-size: 1.8rem;
-        height: 2.5rem; /* Đảm bảo chiều cao cố định cho phần này */
+        height: 2.5rem;
+        /* Đảm bảo chiều cao cố định cho phần này */
     }
 
     .home-content p {
@@ -1507,8 +1538,10 @@ a.btn:nth-child(2)::before{
     .summary {
         font-size: 1.1rem;
         margin-bottom: 1.2rem;
-        display: flex; /* Giữ dạng flex */
-        flex-direction: column; /* Nhưng hiển thị theo chiều dọc */
+        display: flex;
+        /* Giữ dạng flex */
+        flex-direction: column;
+        /* Nhưng hiển thị theo chiều dọc */
         align-items: flex-start;
     }
 
@@ -1907,6 +1940,7 @@ a.btn:nth-child(2)::before{
     0% {
         width: 0;
     }
+
     100% {
         width: 72%;
     }
@@ -1916,6 +1950,7 @@ a.btn:nth-child(2)::before{
     0% {
         width: 0;
     }
+
     100% {
         width: 90%;
     }
@@ -1925,6 +1960,7 @@ a.btn:nth-child(2)::before{
     0% {
         width: 0;
     }
+
     100% {
         width: 80%;
     }
@@ -1934,6 +1970,7 @@ a.btn:nth-child(2)::before{
     0% {
         width: 0;
     }
+
     100% {
         width: 65%;
     }
@@ -1944,6 +1981,7 @@ a.btn:nth-child(2)::before{
         background: var(--bg-color);
         box-shadow: none;
     }
+
     100% {
         background: var(--hover-color);
         box-shadow: var(--neon-box-shadow);
@@ -1956,22 +1994,26 @@ a.btn:nth-child(2)::before{
     gap: 1rem;
     margin-bottom: 2rem;
 }
+
 .contact-info .info-box i {
     font-size: 2rem;
     color: var(--main-color);
     margin-top: 0.2rem;
 }
+
 .contact-info .info-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .contact-info .info-content h3 {
     font-size: 1.1rem;
     margin-bottom: 0.2rem;
     color: var(--hover-color);
     font-weight: 600;
 }
+
 .contact-info .info-content p {
     font-size: 1rem;
     color: var(--text-color);
@@ -1985,6 +2027,7 @@ a.btn:nth-child(2)::before{
     align-items: flex-start;
     margin-bottom: 2rem;
 }
+
 .contact-info-row .info-box {
     display: flex;
     flex-direction: column;
@@ -1993,28 +2036,890 @@ a.btn:nth-child(2)::before{
     margin-bottom: 0;
     min-width: 150px;
 }
+
 .contact-info-row .info-box i {
     font-size: 2rem;
     color: var(--main-color);
     margin-bottom: 0.2rem;
 }
+
 .contact-info-row .info-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+
 .contact-info-row .info-content h3 {
     margin-bottom: 0.1rem;
 }
+
 .contact-info-row .info-content .phone-number {
     margin: 0;
     padding: 0;
     display: block;
     white-space: nowrap;
 }
+
 @media (max-width: 600px) {
     .contact-info-row {
         flex-direction: column;
         gap: 1rem;
+    }
+}
+
+/* Body Styles for Admin Page */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Menu Icon Styles */
+#menu-icon {
+    font-size: 1.8rem;
+    z-index: 10001;
+    color: var(--text-color);
+    cursor: pointer;
+    margin-left: 4rem;
+    background: var(--hover-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    color: var(--second-bg-color);
+    display: none;
+    transition: all 0.3s ease;
+}
+
+#menu-icon.bx-x {
+    transform: rotate(180deg);
+    background: var(--bg-color);
+    color: var(--hover-color);
+    border: 2px solid var(--hover-color);
+    box-shadow: var(--neon-box-shadow);
+}
+
+/* Admin Dashboard Styles */
+.admin-container {
+    max-width: 1200px;
+    margin: 120px auto 50px;
+    padding: 30px;
+    background-color: var(--second-bg-color);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--hover-color);
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+}
+
+.admin-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--hover-color);
+    box-shadow: var(--neon-box-shadow);
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(14, 255, 255, 0.2);
+    padding-bottom: 20px;
+}
+
+.admin-title {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.admin-title span {
+    color: var(--hover-color);
+    text-shadow: var(--font-neon-text-shadow);
+}
+
+.admin-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.admin-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background: var(--bg-color);
+    color: var(--hover-color);
+    border: 2px solid var(--hover-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--neon-box-shadow);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.admin-btn i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.admin-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--hover-color);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.admin-btn:hover::before {
+    width: 100%;
+}
+
+.admin-btn:hover {
+    color: var(--bg-color);
+}
+
+.admin-btn.refreshing i {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Table Styles */
+/* Reset CSS cho bảng */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    min-height: 300px;
+    background-color: rgba(0, 10, 43, 0.7);
+    table-layout: fixed;
+    /* Sử dụng fixed để đảm bảo các cột có kích thước cố định */
+}
+
+/* Responsive table styles */
+@media (max-width: 768px) {
+    .admin-table {
+        min-height: 200px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Đảm bảo nội dung trong các ô không bị tràn */
+.admin-table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 15px 10px;
+    /* Thêm padding để dễ đọc hơn */
+    vertical-align: middle;
+}
+
+.admin-table tbody {
+    min-height: 250px;
+}
+
+.admin-table thead {
+    background-color: var(--bg-color);
+}
+
+.admin-table th {
+    padding: 18px 15px;
+    text-align: left;
+    color: var(--hover-color);
+    font-weight: 600;
+    border-bottom: 2px solid var(--hover-color);
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+.admin-table td {
+    padding: 18px 15px;
+    border-bottom: 1px solid rgba(14, 255, 255, 0.1);
+    color: var(--text-color);
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.admin-table tbody tr {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    /* Thêm con trỏ để chỉ rõ có thể nhấp vào */
+}
+
+.admin-table tbody tr::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: var(--hover-color);
+    opacity: 0.05;
+    transition: width 0.3s ease;
+}
+
+.admin-table tbody tr:hover {
+    background-color: rgba(14, 255, 255, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.admin-table tbody tr:hover::before {
+    width: 100%;
+}
+
+/* Thêm hiệu ứng khi hover để chỉ rõ có thể nhấp vào */
+.admin-table tbody tr:hover td {
+    color: var(--hover-color);
+}
+
+/* Column widths - Đơn giản hóa CSS */
+/* Thiết lập kích thước cột */
+/* ID column */
+.admin-table th:first-child,
+.admin-table td:first-child {
+    width: 10%;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Email column */
+.admin-table th:nth-child(2),
+.admin-table td:nth-child(2) {
+    width: 30%;
+    text-align: left;
+    padding-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Subject column */
+.admin-table th:nth-child(3),
+.admin-table td:nth-child(3) {
+    width: 30%;
+    text-align: left;
+    padding-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Received At column */
+.admin-table th:last-child,
+.admin-table td:last-child {
+    width: 30%;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Responsive column widths */
+@media (max-width: 768px) {
+
+    .admin-table th:first-child,
+    .admin-table td:first-child {
+        width: 15%;
+        font-size: 0.8rem;
+    }
+
+    .admin-table th:nth-child(2),
+    .admin-table td:nth-child(2) {
+        width: 25%;
+    }
+
+    .admin-table th:nth-child(3),
+    .admin-table td:nth-child(3) {
+        width: 25%;
+    }
+
+    .admin-table th:last-child,
+    .admin-table td:last-child {
+        width: 35%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .admin-table th,
+    .admin-table td {
+        padding: 12px 8px;
+        font-size: 0.85rem;
+    }
+
+    .admin-table th:first-child,
+    .admin-table td:first-child {
+        width: 20%;
+        font-size: 0.75rem;
+    }
+
+    .admin-table th:nth-child(2),
+    .admin-table td:nth-child(2) {
+        width: 30%;
+    }
+
+    .admin-table th:nth-child(3),
+    .admin-table td:nth-child(3) {
+        width: 20%;
+    }
+
+    .admin-table th:last-child,
+    .admin-table td:last-child {
+        width: 30%;
+    }
+}
+
+/* Đảm bảo tiêu đề cột được căn chỉnh giống với nội dung */
+.admin-table th {
+    text-align: left;
+    padding-left: 10px;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-color);
+    z-index: 10;
+    border-bottom: 2px solid var(--hover-color);
+}
+
+/* Đảm bảo cột cuối cùng được căn trái giống với dữ liệu */
+.admin-table th:last-child {
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Đảm bảo các hàng có đủ không gian */
+.admin-table tr {
+    border-bottom: 1px solid rgba(14, 255, 255, 0.1);
+}
+
+.admin-table .message-cell {
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.admin-table .message-cell .view-message-text {
+    color: var(--hover-color);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    border: 1px solid rgba(14, 255, 255, 0.3);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.admin-table .message-cell:hover .view-message-text {
+    background-color: rgba(14, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(14, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.message-cell.expanded {
+    white-space: normal;
+    overflow: visible;
+    background-color: rgba(14, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 0;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(14, 255, 255, 0.2);
+    position: fixed;
+    z-index: 1000;
+    /* Tăng z-index để đảm bảo hiển thị trên cùng */
+    transition: all 0.3s ease;
+    line-height: 1.6;
+    color: #fff;
+    border-left: 3px solid var(--hover-color);
+    width: 600px;
+    max-width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(8px);
+    text-align: left;
+    animation: messagePopIn 0.3s ease-out forwards;
+    display: block;
+    /* Đảm bảo phần tử được hiển thị */
+    /* Thêm scrollbar styles cho trải nghiệm tốt hơn trên mobile */
+    scrollbar-width: thin;
+    scrollbar-color: var(--hover-color) rgba(0, 0, 0, 0.2);
+}
+
+.message-cell.expanded::-webkit-scrollbar {
+    width: 6px;
+}
+
+.message-cell.expanded::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.message-cell.expanded::-webkit-scrollbar-thumb {
+    background-color: var(--hover-color);
+    border-radius: 3px;
+}
+
+@keyframes messagePopIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.message-cell.expanded i {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: var(--hover-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 1001;
+    /* Đảm bảo nút đóng hiển thị trên cùng */
+}
+
+.message-cell.expanded i:hover {
+    background-color: var(--hover-color);
+    color: #000;
+    transform: rotate(90deg);
+}
+
+/* Overlay khi mở rộng message */
+.admin-table tbody tr {
+    position: relative;
+}
+
+.message-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    /* Đảm bảo overlay hiển thị dưới message-cell nhưng trên các phần tử khác */
+    backdrop-filter: blur(3px);
+    animation: fadeIn 0.3s ease-out forwards;
+    cursor: pointer;
+    /* Chỉ rõ rằng có thể nhấp vào để đóng */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Message details styling */
+.message-details {
+    font-size: 0.95rem;
+}
+
+.message-details .message-header {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+}
+
+.message-details .message-header strong {
+    color: var(--hover-color);
+    display: inline-block;
+    width: 80px;
+}
+
+.message-details .message-info-row {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.message-details .message-info-row span {
+    flex: 1;
+}
+
+.message-details .message-content {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+    line-height: 1.7;
+    border: 1px solid rgba(14, 255, 255, 0.1);
+    margin-top: 10px;
+    white-space: pre-wrap;
+    /* Giữ nguyên định dạng xuống dòng */
+    word-break: break-word;
+    /* Đảm bảo từ dài sẽ được ngắt xuống dòng */
+}
+
+.message-details .message-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.message-details .message-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.message-details .message-content::-webkit-scrollbar-thumb {
+    background: var(--hover-color);
+    border-radius: 5px;
+}
+
+/* Stats Section */
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid var(--hover-color);
+    box-shadow: var(--neon-box-shadow);
+}
+
+.stat-card i {
+    font-size: 2.5rem;
+    color: var(--hover-color);
+    margin-bottom: 10px;
+}
+
+.stat-card h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin: 10px 0 5px;
+}
+
+.stat-card p {
+    color: var(--paragraph-color);
+    margin: 0;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 50px 0;
+    color: var(--paragraph-color);
+}
+
+.empty-state i {
+    font-size: 5rem;
+    color: var(--hover-color);
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+.empty-state h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+/* Refresh Button Animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#refreshButton.refreshing i {
+    animation: spin 1s linear infinite;
+}
+
+#refreshButton {
+    position: relative;
+    overflow: hidden;
+}
+
+#refreshButton::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--hover-color);
+    transition: width 0.3s ease;
+}
+
+#refreshButton.refreshing::after {
+    width: 100%;
+    transition: width 2s linear;
+}
+
+/* Auto Refresh Button */
+#autoRefreshButton {
+    position: relative;
+    overflow: hidden;
+}
+
+#autoRefreshButton.active {
+    background-color: rgba(14, 255, 255, 0.1);
+    border-color: var(--hover-color);
+}
+
+#autoRefreshButton.active i {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Toast Notification */
+.toast-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(14, 255, 255, 0.1);
+    border-left: 3px solid var(--hover-color);
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    transform: translateX(120%);
+    transition: transform 0.3s ease;
+    color: var(--text-color);
+}
+
+.toast-notification.show {
+    transform: translateX(0);
+}
+
+.toast-notification i {
+    margin-right: 10px;
+    color: var(--hover-color);
+    font-size: 1.2rem;
+}
+
+/* Footer Styles for Admin Page */
+.footer {
+    margin-top: auto;
+    background-color: var(--bg-color);
+    border-top: 1px solid var(--hover-color);
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .admin-container {
+        padding: 20px 15px;
+    }
+
+    .admin-title {
+        font-size: 2rem;
+    }
+
+    .admin-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .stat-card i {
+        font-size: 2rem;
+    }
+
+    .stat-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .message-cell.expanded {
+        width: 90%;
+        max-width: 500px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .admin-actions {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .admin-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .admin-table {
+        display: block;
+        overflow-x: auto;
+        font-size: 0.9rem;
+    }
+
+    .admin-table th,
+    .admin-table td {
+        padding: 10px;
+    }
+
+    .admin-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .toast-notification {
+        max-width: 90%;
+        right: 5%;
+        left: 5%;
+        transform: translateY(-100%);
+    }
+
+    .toast-notification.show {
+        transform: translateY(0);
+    }
+
+    /* Mobile menu styles */
+    #menu-icon {
+        display: block;
+        margin-left: 0;
+    }
+
+    .navlist {
+        position: absolute;
+        top: -1000px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 5%;
+        background: var(--bg-color);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        z-index: 1000;
+        transition: all .45s ease;
+        display: block;
+    }
+
+    .navlist.active {
+        top: 100%;
+    }
+
+    .navlist li {
+        margin: 1.5rem 0;
+    }
+
+    .navlist a {
+        font-size: 1.2rem;
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .admin-title {
+        font-size: 1.8rem;
+    }
+
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .admin-btn {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .message-cell.expanded {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .message-details .message-header strong {
+        width: 60px;
+    }
+
+    .message-details .message-content {
+        max-height: 200px;
+        padding: 15px;
     }
 }
