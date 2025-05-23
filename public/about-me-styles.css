@@ -1,0 +1,248 @@
+/* styles.css - Tối giản với Fade-in và Grid */
+
+/* CSS Variables - Giữ lại để dễ tùy chỉnh màu sắc, font */
+:root {
+  --bg-color: #121212;
+  --surface-color: #1e1e1e;
+  --primary-text-color: #e0e0e0;
+  --secondary-text-color: #b0b0b0;
+  --accent-color-primary: #00bcd4; /* Teal */
+  --border-color: #2c2c2c;
+
+  --font-primary: 'Poppins', sans-serif;
+  --font-headings: 'Roboto Slab', serif;
+
+  --container-width: 1000px;
+  --border-radius: 4px; /* Bo góc nhẹ nhàng */
+
+  --animation-duration: 0.6s; /* Thời gian cho hiệu ứng fade-in */
+}
+
+/* Basic Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-color);
+  color: var(--primary-text-color);
+  line-height: 1.6;
+  font-size: 16px;
+  /* Áp dụng fade-in cho toàn bộ body nếu muốn */
+  /* opacity: 0;
+  animation: fadeIn var(--animation-duration) ease-out forwards; */
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-family: var(--font-headings);
+  color: var(--primary-text-color);
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--accent-color-primary);
+  text-align: center;
+  margin-bottom: 0.25em;
+}
+
+h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--accent-color-primary);
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: var(--accent-color-primary);
+}
+
+p {
+  color: var(--secondary-text-color);
+  margin-bottom: 0.8em;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 5px;
+  padding-left: 15px;
+  position: relative;
+}
+
+ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color-primary);
+}
+
+a {
+  color: var(--accent-color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header / Hero */
+.hero {
+  padding: 50px 20px 40px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero .subtitle {
+  font-size: 1.1rem;
+  color: var(--secondary-text-color);
+}
+
+/* Section Fade-in Styling */
+section {
+  padding: 30px 0;
+  opacity: 0; /* Bắt đầu ẩn */
+  animation: fadeIn var(--animation-duration) ease-out forwards;
+  /* Thêm độ trễ nếu muốn các section xuất hiện lần lượt */
+  /* animation-delay: calc(var(--animation-duration) * var(--section-index, 0) * 0.3); */
+  /* Để dùng animation-delay như trên, bạn cần đặt biến --section-index trong HTML cho từng section */
+  /* Ví dụ: <section id="about" style="--section-index: 1;"> */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Grid Layouts cho Skills, Values, Projects */
+.skills-grid, .values-grid, .projects-grid {
+  display: grid;
+  gap: 15px; /* Khoảng cách giữa các item trong grid */
+}
+
+/* Cấu hình cột cho từng grid */
+.skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.values-grid { /* Giả sử bạn có section values */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.projects-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Card Styling - Tối giản */
+.skill-category, .value-item, .project-card {
+  background-color: var(--surface-color);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  /* Không có box-shadow hoặc hiệu ứng hover phức tạp */
+}
+
+.skill-category h3 i, .value-item h3 i { /* Icon trong card */
+  margin-right: 6px;
+  color: var(--accent-color-primary);
+}
+
+/* Call To Action Button - Tối giản */
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-color-primary);
+  color: var(--bg-color); /* Chữ tối trên nền sáng */
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  border: 1px solid var(--accent-color-primary);
+  transition: background-color 0.2s ease-out; /* Hiệu ứng đổi màu nền nhẹ nhàng */
+}
+
+.cta-button:hover {
+  background-color: var(--accent-color-secondary); /* Đổi màu nền khi hover */
+  border-color: var(--accent-color-secondary);
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Footer - Tối giản */
+.site-footer {
+  background-color: var(--surface-color);
+  color: var(--secondary-text-color);
+  padding: 15px 0;
+  margin-top: 30px;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.social-links a {
+  color: var(--secondary-text-color);
+  margin: 0 5px;
+  font-size: 1.2rem;
+}
+.social-links a:hover {
+  color: var(--accent-color-primary);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  h1 { font-size: 2.1rem; }
+  h2 { font-size: 1.6rem; }
+  .hero { padding: 40px 15px 30px; }
+
+  /* Cho các grid xếp thành 1 cột trên màn hình nhỏ hơn */
+  .skills-grid, .values-grid, .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  section { padding: 25px 0; }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 15px; }
+  h1 { font-size: 1.8rem; }
+  .hero .subtitle { font-size: 1rem; }
+  .cta-button { padding: 7px 14px; font-size: 0.9rem; }
+}
+
+/* Accessibility: Giảm chuyển động */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
