@@ -1,1 +1,0 @@
-Đây là file placeholder. Bạn cần thêm các hình ảnh thực tế vào thư mục img với tên file từ 1.jpg đến 6.jpg để hiển thị trong portfolio.
