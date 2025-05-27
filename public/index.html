@@ -9,7 +9,7 @@
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-      <style>
+    <style>
     html, body {
       height: 100%;
       margin: 0;
@@ -53,7 +53,7 @@
                 </div>
 
 
-                <p>Yapping at the moon</p>
+                <p>Upon his arrival, Einar meets another slave, Thorfinn, who was exiled after the events of the first season. As time passes, Einar learns of Thorfinn's crimes but befriends him as they work together to earn their freedom. Thorfinn confronts his past, learns about the value of restraint and the cost of violence, shaping his decisions and interactions.</p>
 
            
 
@@ -69,8 +69,8 @@
                 </div>
 
                 <div class="btn-box">
-                    <a href="#" class="btn">Download CV</a>
-                    <a href="#" class="btn">Hire Me Now</a>
+                    <a href="images/Copilot.pdf" class="btn" download>Download CV</a>
+                    <a href="#contact" class="btn">Hire Me Now</a>
                 </div>
 
                 <div class="social-icons">
@@ -83,7 +83,7 @@
 
             <div class="home-img">
                 <div class="img-box">
-                    <img src="images/about-me-pic2.png" alt="Profile Picture">
+                    <img src="images/about-me.png" alt="Profile Picture">
                 </div>
 
                 <div class="liquid-shape">
@@ -301,7 +301,6 @@
                 </div>
                 <button type="submit" class="submit-btn">Login</button>
             </form>
-            <p class="switch-form">Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
         </div>
     </div>
 
@@ -427,7 +426,7 @@
                 <div class="info-box">
                     <i class='bx bx-envelope'></i>
                     <h3>Email</h3>
-                    <p>cheese@gmail.com</p>
+                    <p>copilot@gmail.com</p>
                 </div>
                 <div class="info-box">
                     <i class='bx bx-phone'></i>
@@ -480,9 +479,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         // Modal elements
         const loginModal = document.getElementById('loginModal');
-        const signupModal = document.getElementById('signupModal');
         const loginBtn = document.querySelector('.nav-btn.login');
-        const signupBtn = document.querySelector('.nav-btn.signup');
         const closeBtns = document.querySelectorAll('.modal .close');
         const showSignupLink = document.getElementById('showSignup');
         const showLoginLink = document.getElementById('showLogin');
@@ -496,14 +493,6 @@
             });
         }
 
-        // Open signup modal
-        if (signupBtn) {
-            signupBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                signupModal.style.display = 'block';
-            });
-        }
-
         // Close modals
         closeBtns.forEach(btn => {
             btn.onclick = function() {
@@ -511,15 +500,6 @@
                 signupModal.style.display = 'none';
             };
         });
-
-        // Switch modals
-        if (showSignupLink) {
-            showSignupLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                loginModal.style.display = 'none';
-                signupModal.style.display = 'block';
-            });
-        }
 
         if (showLoginLink) {
             showLoginLink.addEventListener('click', function(e) {
@@ -532,7 +512,6 @@
         // Đóng modal khi click bên ngoài
         window.onclick = function(event) {
             if (event.target == loginModal) loginModal.style.display = 'none';
-            if (event.target == signupModal) signupModal.style.display = 'none';
         };
 
         // Xử lý form đăng nhập
