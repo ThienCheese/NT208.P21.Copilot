@@ -4,22 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Cheese - Portfolio</title>
+    <title>Copilot - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-      <style>
-    body {
-    height: 100%;
-    margin: 0;
-    zoom: 0.75;
-    }
-    #app {
-      width: 100vw;
-      height: 100vh;
-      background: linear-gradient(to right, #00f, #0ff);
-    }
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #app {
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to right, #00f, #0ff);
+        }
     </style>
 </head>
 
@@ -42,7 +43,7 @@
     <section class="home" id="home">
         <div class="home-container">
             <div class="home-content">
-                <h1>Hello, I'm <span>Cheese</span></h1>
+                <h1>Hello, I'm <span>Copilot</span></h1>
                 <div class="summary">
                     <h3>I'm a</h3>
                     <h3>
@@ -54,9 +55,13 @@
                 </div>
 
 
-                <p>Yapping at the moon</p>
+                <p>As a passionate and detail-oriented web developer, I specialize in creating dynamic, responsive, and
+                    user-friendly websites and web applications. With a strong foundation in HTML, CSS, JavaScript, and
+                    modern frameworks like React and Node.js, I bring ideas to life through clean, efficient code and
+                    thoughtful design. Whether building from scratch or improving existing platforms, I am committed to
+                    delivering high-quality solutions that enhance user experience and meet business goals.</p>
 
-           
+
 
                 <div class="info-box">
                     <div class="email-info">
@@ -70,8 +75,8 @@
                 </div>
 
                 <div class="btn-box">
-                    <a href="#" class="btn">Download CV</a>
-                    <a href="#" class="btn">Hire Me Now</a>
+                    <a href="images/Copilot.pdf" class="btn" download>Download CV</a>
+                    <a href="#contact" class="btn">Hire Me Now</a>
                 </div>
 
                 <div class="social-icons">
@@ -84,16 +89,14 @@
 
             <div class="home-img">
                 <div class="img-box">
-                    <img src="images/about-me-pic2.png" alt="Profile Picture">
+                    <img src="images/about-me.png" alt="Profile Picture">
                 </div>
 
                 <div class="liquid-shape">
-                    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
                         <path fill="#12f7ff">
-                            <animate attributeName="d"
-                            dur="20s"
-                            repeatCount="indefinite"
-                            values="
+                            <animate attributeName="d" dur="20s" repeatCount="indefinite" values="
                             M466.74927,311.43621Q484.06233,372.87241,428.59052,400.68992Q373.1187,428.50743,326.75371,463.138Q280.38873,497.76857,235.74184,451.92434Q191.09496,406.08011,157.3368,384.43322Q123.57865,362.78634,92.86054,329.71068Q62.14244,296.63501,52.24184,247.81751Q42.34125,199,51.84569,141.02818Q61.35013,83.05637,110.45696,46.72699Q159.56379,10.39761,215.08753,44.92434Q270.61127,79.45106,313.22255,87.84423Q355.83382,96.2374,410.17062,116.57122Q464.50743,136.90504,456.97182,193.45252Q449.43621,250,466.74927,311.43621Z;
 
                             M469,300Q441,350,412,396.5Q383,443,327.5,438Q272,433,219.5,451.5Q167,470,118,440.5Q69,411,73,352Q77,293,73,249Q69,205,79,156Q89,107,138,96Q187,85,231.5,62Q276,39,316,68Q356,97,391.5,127Q427,157,462,203.5Q497,250,469,300Z;
@@ -105,19 +108,15 @@
                             M447.90375,297.3075Q430.2685,344.615,397.32675,380.09625Q364.385,415.5775,318.55775,428.82625Q272.7305,442.075,228.6925,431.63275Q184.6545,421.1905,145.98175,398.4985Q107.309,375.8065,73.05775,339.05725Q38.8065,302.308,22.24825,245.86525Q5.69,189.4225,41.78725,143.67275Q77.8845,97.923,129.5385,83.71175Q181.1925,69.5005,225.9615,72.232Q270.7305,74.9635,324.654,69.05825Q378.5775,63.153,391.3075,115.82675Q404.0375,168.5005,434.78825,209.25025Q465.539,250,447.90375,297.3075Z;
 
                             M455.34846,294.35066Q419.45242,338.70132,388.05198,371.60176Q356.65154,404.5022,314.82577,422.15154Q273,439.80088,224.82577,441.37335Q176.65154,442.94582,147.62445,404.72401Q118.59736,366.5022,64.07687,337.92533Q9.55638,309.34846,9.82797,250.19912Q10.09956,191.04978,53.4978,152.92313Q96.89604,114.79648,134.22401,78.77599Q171.55198,42.7555,225.47511,25.33457Q279.39824,7.91363,334.47291,27.55858Q389.54758,47.20352,429.81697,90.80528Q470.08637,134.40704,480.66543,192.20352Q491.2445,250,455.34846,294.35066Z;
-                            "
-
-                            ></animate>
+                            "></animate>
                         </path>
                     </svg>
                 </div>
                 <div class="liquid-shape">
-                    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
                         <path fill="#12f7ff">
-                            <animate attributeName="d"
-                            dur="20s"
-                            repeatCount="indefinite"
-                            values="
+                            <animate attributeName="d" dur="20s" repeatCount="indefinite" values="
                             M466.74927,311.43621Q484.06233,372.87241,428.59052,400.68992Q373.1187,428.50743,326.75371,463.138Q280.38873,497.76857,235.74184,451.92434Q191.09496,406.08011,157.3368,384.43322Q123.57865,362.78634,92.86054,329.71068Q62.14244,296.63501,52.24184,247.81751Q42.34125,199,51.84569,141.02818Q61.35013,83.05637,110.45696,46.72699Q159.56379,10.39761,215.08753,44.92434Q270.61127,79.45106,313.22255,87.84423Q355.83382,96.2374,410.17062,116.57122Q464.50743,136.90504,456.97182,193.45252Q449.43621,250,466.74927,311.43621Z;
 
                             M469,300Q441,350,412,396.5Q383,443,327.5,438Q272,433,219.5,451.5Q167,470,118,440.5Q69,411,73,352Q77,293,73,249Q69,205,79,156Q89,107,138,96Q187,85,231.5,62Q276,39,316,68Q356,97,391.5,127Q427,157,462,203.5Q497,250,469,300Z;
@@ -129,9 +128,7 @@
                             M447.90375,297.3075Q430.2685,344.615,397.32675,380.09625Q364.385,415.5775,318.55775,428.82625Q272.7305,442.075,228.6925,431.63275Q184.6545,421.1905,145.98175,398.4985Q107.309,375.8065,73.05775,339.05725Q38.8065,302.308,22.24825,245.86525Q5.69,189.4225,41.78725,143.67275Q77.8845,97.923,129.5385,83.71175Q181.1925,69.5005,225.9615,72.232Q270.7305,74.9635,324.654,69.05825Q378.5775,63.153,391.3075,115.82675Q404.0375,168.5005,434.78825,209.25025Q465.539,250,447.90375,297.3075Z;
 
                             M455.34846,294.35066Q419.45242,338.70132,388.05198,371.60176Q356.65154,404.5022,314.82577,422.15154Q273,439.80088,224.82577,441.37335Q176.65154,442.94582,147.62445,404.72401Q118.59736,366.5022,64.07687,337.92533Q9.55638,309.34846,9.82797,250.19912Q10.09956,191.04978,53.4978,152.92313Q96.89604,114.79648,134.22401,78.77599Q171.55198,42.7555,225.47511,25.33457Q279.39824,7.91363,334.47291,27.55858Q389.54758,47.20352,429.81697,90.80528Q470.08637,134.40704,480.66543,192.20352Q491.2445,250,455.34846,294.35066Z;
-                            "
-
-                            ></animate>
+                            "></animate>
                         </path>
                     </svg>
                 </div>
@@ -139,17 +136,6 @@
         </div>
     </section>
 
-<<<<<<< HEAD
-
-<!-- about section -->
-<section id="about" class="about">
-  <div class="img-about">
-    <img src="images/about-me-pic2.png" alt="">
-    <div class="info-about1">
-        <span>10+</span>
-        <p>Years of Experience</p>
-    </div>
-=======
     <!-- About Section -->
     <section id="about" class="about">
         <div class="img-about">
@@ -161,16 +147,16 @@
 
 
             <div class="info-about2">
-            <span>150+</span>
-            <p>Project Complete</p>
+                <span>150+</span>
+                <p>Project Complete</p>
             </div>
             <div class="info-about3">
-            <span>200+</span>
-            <p>Happy Clients</p>
+                <span>200+</span>
+                <p>Happy Clients</p>
 
             </div>
         </div>
->>>>>>> f79e79d94288d8e8ef8499fd579423a4808bc8d6
+
 
     <div class="info-about2">
       <span>150+</span>
@@ -193,6 +179,14 @@
     </div>
   </div>
 </section>
+
+            <h2>About me</h2>
+            <h3>A story of good</h3>
+            <div class="btn-box">
+                <a href="#" class="btn">Read More!</a>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -224,7 +218,7 @@
     </section>
 
     <!-- Skill Section -->
-     <section id="skills" class="skills">
+    <section id="skills" class="skills">
         <div class="main-text">
             <span>Technique and professional</span>
             <h2>My skills</h2>
@@ -275,7 +269,7 @@
             </div>
             <div class="skill-right">
                 <h3>Professional skills</h3>
-               <div class="professional">
+                <div class="professional">
                     <div class="box">
                         <div class="circle" data-dots="80" data-percent="90"></div>
                         <div class="text">
@@ -307,7 +301,7 @@
                 </div>
             </div>
         </div>
-     </section>
+    </section>
 
 
     <!-- Login Modal -->
@@ -326,37 +320,10 @@
                 </div>
                 <button type="submit" class="submit-btn">Login</button>
             </form>
-            <p class="switch-form">Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
         </div>
     </div>
 
-    <!-- Signup Modal -->
-    <div class="modal" id="signupModal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Sign Up</h2>
-            <form id="signupForm">
-                <div class="form-group">
-                    <input type="text" id="signupName" required>
-                    <label>Full Name</label>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="signupEmail" required>
-                    <label>Email</label>
-                </div>
-                <div class="form-group">
-                    <input type="password" id="signupPassword" required>
-                    <label>Password</label>
-                </div>
-                <div class="form-group">
-                    <input type="password" id="confirmPassword" required>
-                    <label>Confirm Password</label>
-                </div>
-                <button type="submit" class="submit-btn">Sign Up</button>
-            </form>
-            <p class="switch-form">Already have an account? <a href="#" id="showLogin">Login</a></p>
-        </div>
-    </div>
+
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
@@ -452,7 +419,7 @@
                 <div class="info-box">
                     <i class='bx bx-envelope'></i>
                     <h3>Email</h3>
-                    <p>cheese@gmail.com</p>
+                    <p>copilot@gmail.com</p>
                 </div>
                 <div class="info-box">
                     <i class='bx bx-phone'></i>
@@ -482,7 +449,10 @@
             </form>
         </div>
     </section>
-
+    <!-- Thêm vào cuối body -->
+    <div id="custom-alert" class="custom-alert" style="display:none;">
+        <span class="custom-alert-message"></span>
+    </div>
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -501,180 +471,125 @@
     <!-- Không cần thư viện MixItUp nữa -->
 
     <script>
-    // Xử lý modal Login/Signup
-    document.addEventListener('DOMContentLoaded', function() {
-        // Modal elements
-        const loginModal = document.getElementById('loginModal');
-        const signupModal = document.getElementById('signupModal');
-        const loginBtn = document.querySelector('.nav-btn.login');
-        const signupBtn = document.querySelector('.nav-btn.signup');
-        const closeBtns = document.querySelectorAll('.modal .close');
-        const showSignupLink = document.getElementById('showSignup');
-        const showLoginLink = document.getElementById('showLogin');
+        // Xử lý modal Login/Signup
+        document.addEventListener('DOMContentLoaded', function () {
+            // Modal elements
+            const loginModal = document.getElementById('loginModal');
+            const loginBtn = document.querySelector('.nav-btn.login');
+            const closeBtns = document.querySelectorAll('.modal .close');
+            const showSignupLink = document.getElementById('showSignup');
+            const showLoginLink = document.getElementById('showLogin');
 
-        // Open login modal
-        if (loginBtn) {
-            loginBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                loginModal.style.display = 'block';
-                console.log('Login modal opened');
+            // Open login modal
+            if (loginBtn) {
+                loginBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    loginModal.style.display = 'block';
+                    console.log('Login modal opened');
+                });
+            }
+
+            // Close modals
+            closeBtns.forEach(btn => {
+                btn.onclick = function () {
+                    loginModal.style.display = 'none';
+                    signupModal.style.display = 'none';
+                };
             });
-        }
 
-        // Open signup modal
-        if (signupBtn) {
-            signupBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                signupModal.style.display = 'block';
-            });
-        }
+            if (showLoginLink) {
+                showLoginLink.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    signupModal.style.display = 'none';
+                    loginModal.style.display = 'block';
+                });
+            }
 
-        // Close modals
-        closeBtns.forEach(btn => {
-            btn.onclick = function() {
-                loginModal.style.display = 'none';
-                signupModal.style.display = 'none';
+            // Đóng modal khi click bên ngoài
+            window.onclick = function (event) {
+                if (event.target == loginModal) loginModal.style.display = 'none';
             };
+
+            // Xử lý form đăng nhập
+            const loginForm = document.getElementById('loginForm');
+            if (loginForm) {
+                loginForm.addEventListener('submit', async function (event) {
+                    event.preventDefault();
+                    const email = document.getElementById('loginEmail').value;
+                    const password = document.getElementById('loginPassword').value;
+
+                    console.log('Login attempt with:', email);
+
+                    try {
+                        const response = await fetch('/api/login', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ email, password })
+                        });
+
+                        console.log('Response status:', response.status);
+
+                        const result = await response.json();
+                        console.log('Response data:', result);
+
+                        if (response.ok && result.success) {
+                            showCustomAlert(result.message);
+                            loginModal.style.display = 'none';
+                            loginForm.reset();
+                            window.location.href = '/admin';
+                        } else {
+                            alert(result.message || 'Login failed.');
+                        }
+                    } catch (err) {
+                        console.error('Login error:', err);
+                        alert('Error during login. Please check console for details.');
+                    }
+                });
+            }
+
+
+            // Xử lý form liên hệ
+            const contactForm = document.querySelector('.contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function (event) {
+                    event.preventDefault();
+                    const name = contactForm.querySelector('input[placeholder="Your Name"]').value;
+                    const email = contactForm.querySelector('input[placeholder="Your Email"]').value;
+                    const subject = contactForm.querySelector('input[placeholder="Subject"]').value;
+                    const message = contactForm.querySelector('textarea[placeholder="Your Message"]').value;
+
+                    try {
+                        const response = await fetch('/api/contact', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ name, email, subject, message })
+                        });
+
+                        const result = await response.json();
+
+                        if (response.ok && result.success) {
+                            alert(result.message);
+                            contactForm.reset();
+                        } else {
+                            alert(result.message || 'Failed to send message.');
+                        }
+                    } catch (err) {
+                        console.error('Error sending message:', err);
+                        alert('Error sending message. Please check console for details.');
+                    }
+                });
+            }
         });
-
-        // Switch modals
-        if (showSignupLink) {
-            showSignupLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                loginModal.style.display = 'none';
-                signupModal.style.display = 'block';
-            });
+        // Hiển thị popup thông báo
+        function showCustomAlert(message) {
+            const alertBox = document.getElementById('custom-alert');
+            const alertMsg = alertBox.querySelector('.custom-alert-message');
+            alertMsg.textContent = message;
+            alertBox.style.display = 'block';
+            setTimeout(() => {
+                alertBox.style.display = 'none';
+            }, 2500);
         }
-
-        if (showLoginLink) {
-            showLoginLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                signupModal.style.display = 'none';
-                loginModal.style.display = 'block';
-            });
-        }
-
-        // Đóng modal khi click bên ngoài
-        window.onclick = function(event) {
-            if (event.target == loginModal) loginModal.style.display = 'none';
-            if (event.target == signupModal) signupModal.style.display = 'none';
-        };
-
-        // Xử lý form đăng nhập
-        const loginForm = document.getElementById('loginForm');
-        if (loginForm) {
-            loginForm.addEventListener('submit', async function(event) {
-                event.preventDefault();
-                const email = document.getElementById('loginEmail').value;
-                const password = document.getElementById('loginPassword').value;
-
-                console.log('Login attempt with:', email);
-
-                try {
-                    const response = await fetch('/api/login', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ email, password })
-                    });
-
-                    console.log('Response status:', response.status);
-
-                    const result = await response.json();
-                    console.log('Response data:', result);
-
-                    if (response.ok && result.success) {
-                        alert(result.message);
-                        loginModal.style.display = 'none';
-                        loginForm.reset();
-                        window.location.href = '/admin';
-                    } else {
-                        alert(result.message || 'Login failed.');
-                    }
-                } catch (err) {
-                    console.error('Login error:', err);
-                    alert('Error during login. Please check console for details.');
-                }
-            });
-        }
-
-        // Xử lý form đăng ký
-        const signupForm = document.getElementById('signupForm');
-        if (signupForm) {
-            signupForm.addEventListener('submit', async function(event) {
-                event.preventDefault();
-                const name = document.getElementById('signupName').value;
-                const email = document.getElementById('signupEmail').value;
-                const password = document.getElementById('signupPassword').value;
-                const confirmPassword = document.getElementById('confirmPassword').value;
-
-                if (password !== confirmPassword) {
-                    alert('Passwords do not match!');
-                    return;
-                }
-
-                console.log('Signup attempt with:', { name, email });
-
-                try {
-                    const response = await fetch('/api/signup', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ name, email, password })
-                    });
-
-                    console.log('Response status:', response.status);
-
-                    const result = await response.json();
-                    console.log('Response data:', result);
-
-                    if (response.ok && result.success) {
-                        alert(result.message);
-                        signupModal.style.display = 'none';
-                        signupForm.reset();
-
-                        // Hiển thị modal đăng nhập sau khi đăng ký thành công
-                        loginModal.style.display = 'block';
-                    } else {
-                        alert(result.message || 'Registration failed.');
-                    }
-                } catch (err) {
-                    console.error('Registration error:', err);
-                    alert('Error during registration. Please check console for details.');
-                }
-            });
-        }
-
-        // Xử lý form liên hệ
-        const contactForm = document.querySelector('.contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', async function(event) {
-                event.preventDefault();
-                const name = contactForm.querySelector('input[placeholder="Your Name"]').value;
-                const email = contactForm.querySelector('input[placeholder="Your Email"]').value;
-                const subject = contactForm.querySelector('input[placeholder="Subject"]').value;
-                const message = contactForm.querySelector('textarea[placeholder="Your Message"]').value;
-
-                try {
-                    const response = await fetch('/api/contact', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ name, email, subject, message })
-                    });
-
-                    const result = await response.json();
-
-                    if (response.ok && result.success) {
-                        alert(result.message);
-                        contactForm.reset();
-                    } else {
-                        alert(result.message || 'Failed to send message.');
-                    }
-                } catch (err) {
-                    console.error('Error sending message:', err);
-                    alert('Error sending message. Please check console for details.');
-                }
-            });
-        }
-    });
     </script>
     <script src="script.js"></script>
 </body>
