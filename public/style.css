@@ -15,7 +15,7 @@
 
 :root {
     --bg-color: #000a2b;
-    --second-bg-color: #292e33;
+    --second-bg-color: #022333;
     --text-color: #f5f5f5;
     --main-color: #0ef;
     --hover-color: #12d0ff;
@@ -2184,7 +2184,8 @@ main {
     .home-content .info-box { flex-direction: column; align-items: flex-start; gap: 0.3rem; margin-bottom: 1rem; max-width: 320px; }
 
     .summary { flex-direction: column; align-items: flex-start; text-align: justify; gap: 0.3rem; margin-bottom: 1rem; }
-    .summary h3, .summary .word { font-size: 1.1rem; width: 100%; display: block; }
+    .summary h3, .summary .word { font-size: 2rem; width: 100%; display: flex; }
+    .summary span { font-size: 2rem;}
 
     .btn-box { flex-direction: column; gap: 0.5rem; align-items: stretch; max-width: 120px !important; margin-bottom: 1rem; }
     .btn-box .btn { width: 100%; font-size: 0.5rem !important; padding: 0.7rem 0; height: 45px !important; width: 150px !important; }
@@ -2206,7 +2207,7 @@ main {
     .img-about { margin-left: auto; margin-right: auto; display: block; max-width: 350px;}
     .about-content { width: 100%; text-align: center; margin: 0 auto; display: flex; flex-direction: column; align-items: center;}
     .about-content .btn-box { display: flex; justify-content: center; align-items: center; width: 100%; margin: 1.2rem 0 0 0;}
-    .about-content .btn-box .btn { margin: 0 auto; min-width: 150px; max-width: 220px; width: 100%; text-align: center;font-size: 1rem;}
+    .about-content .btn-box .btn { margin: 0 23%; min-width: 150px; max-width: 220px; width: 100%; text-align: center;font-size: 1rem;}
     .about .img-about { max-width: 350px; }
     .info-about1,.info-about2,.info-about3 {position: absolute; margin: 1rem auto; display: inline-flex ;height: 80px; width: 80px; font-size: 0.7rem !important; font-weight: 500; letter-spacing: 0.5px;}
     .info-about1 span,
@@ -2221,9 +2222,9 @@ main {
         font-size: 0.7rem !important;
         font-weight: 400;
     }
-    .info-about1 { top: 30%; left: 0; }
-    .info-about2 { top: 5%; right: -75%; }
-    .info-about3 { bottom: 0; left: 0; }
+    .info-about1 { top: 20%; left: -25%; }
+    .info-about2 { top: 5%; right: -105%; }
+    .info-about3 { bottom: -5%; left: 45%; }
 
     .admin-container { padding: 20px 15px; }
     .admin-title { font-size: 2rem; }
@@ -2261,7 +2262,7 @@ main {
     .home-content p { font-size: 1rem; line-height: 1.6; }
     .home-content .info-box { max-width: 180px !important; width: 100% !important; font-size: 0.8rem !important; align-items: center; margin: 1rem auto; gap: 0.8rem; }
     .home-content .btn-box { justify-content: center; margin: 1.2rem auto; gap: 1rem; }
-    .social-icons { margin: 1.5rem auto; justify-content: center; width: 220px; }
+    .social-icons { margin-left: 36%; justify-content: center; width: 220px; }
     .portfolio-gallery { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
     .fillter-buttons { flex-wrap: wrap; gap: 0.8rem; }
     .port-box { height: 200px; }
@@ -2293,6 +2294,9 @@ main {
     .navlist a { font-size: 1.2rem; display: block; }
     .footer-content { flex-direction: column; gap: 1rem; text-align: center; }
     .footer-social { justify-content: center; }
+    .home-content .btn-box { justify-content: center; margin: 1.2rem auto; gap: 1rem; }
+    .social-icons { margin-left: 36%; justify-content: center; width: 220px; }
+    .skill-main { grid-template-columns: 1fr; row-gap: 3rem; max-width: 550px ; align-items: stretch;}
 }
 
 /* Small devices (max-width: 600px) */
@@ -2303,16 +2307,19 @@ main {
     .about-content h2 { font-size: 1.1rem; }
     .about-content h3 { font-size: 1rem; }
     .about-content p { font-size: 0.9rem; }
-    .info-about1, .info-about2, .info-about3 { height: 50px; width: 50px; font-size: 0.3rem !important; padding: 5px; }
+    .info-about1, .info-about2, .info-about3 { height: 70px; width: 70px; font-size: 0.3rem !important; padding: 5px; }
+    .info-about1 span, .info-about2 span, .info-about3 span { font-size: 0.6rem !important; }
+    .info-about1 p, .info-about2 p, .info-about3 p { font-size: 0.2rem !important; }
     .home-content { padding: 0 0.3rem; font-size: 0.9rem; }
     .summary { gap: 0.15rem; margin-bottom: 0.5rem; }
     .summary h3, .summary .word { font-size: 0.9rem; }
-    .info-box { gap: 0.1rem; font-size: 0.85rem; max-width: 120px; }
-    .info-box i { font-size: 0.9rem; margin-right: 0.1rem; }
-    .info-box span { font-size: 0.85rem; }
-    .btn-box { gap: 0.2rem; max-width: 120px; }
-    .btn-box .btn { font-size: 0.85rem; height: 32px; padding: 0.3rem 0; }
-    .social-icons { gap: 0.3rem; margin-top: 0.5rem; }
+    .info-box { gap: 0.2rem; font-size: 0.85rem; max-width: 120px; }
+    .info-box i { font-size: 1.5rem !important; margin-right: 0.1rem; width: 32px !important; }
+    .info-box span { font-size: 1.5rem !important; }
+    .btn-box { gap: 0.2rem; max-width: 100px; }
+    .btn-box .btn { font-size: 0.85rem !important; height: 32px !important; padding: 0.3rem 0; max-width: 120px; }
+    .home-content .btn-box { justify-content: center; margin: 1.2rem auto; gap: 1rem; }
+    .social-icons { margin-left: 30%; justify-content: center; width: 220px; }
     .social-icons a { font-size: 0.9rem; width: 26px; height: 26px; }
     .home-content h1, .home-content h3, .home-content p { word-break: break-word; }
     .contact-info-row { flex-direction: column; gap: 0.5rem;}
@@ -2324,31 +2331,31 @@ main {
     :root { --big-font: 1.5rem; --normal-font: 1rem; --h2-font: 1.2rem; --small-font: 0.8rem; }
     section { padding: 50px 3% 30px; }
     header { padding: 0.6rem 3%; }
-    .logo { font-size: 1.2rem; }
-    #menu-icon { font-size: 1rem; padding: 0.2rem 0.5rem; }
+    .logo { font-size: 1.6em; }
+    #menu-icon { font-size: 1.5rem; padding: 0.2rem 0.5rem; }
     .navlist.active { top: 45px; padding: 0.7rem 3%; }
     .home { padding-top: 90px; }
     .home-container { padding: 0 2%; margin-top: 10px; }
-    .home-img, .home-img .img-box { max-width: 120px; }
+    .home-img, .home-img .img-box { max-width: 250px; }
     .home-img .img-box img { border-radius: 8px; }
-    .home-img .liquid-shape { transform: scale(0.7); }
+    .home-img .liquid-shape { transform: scale(1); }
     .home-content h1 { font-size: 1.2rem; margin-bottom: 0.3rem; }
     .summary { font-size: 0.9rem; margin-bottom: 0.5rem; }
     .summary h3 { font-size: 1.1rem; height: 1.5rem; }
     .summary h3:first-child { min-width: 2rem; }
     .home-content p { font-size: 0.85rem; margin: 0.2rem 0; }
-    .home-content .btn-box { flex-direction: column; gap: 0.4rem; max-width: 120px; }
-    .btn-box a.btn { width: 100%; height: 32px; font-size: 0.9rem; }
+    .home-content .btn-box { flex-direction: column; gap: 0.9rem; max-width: 150px; }
+    .btn-box a.btn { width: 100%; height: 35px !important; font-size: 0.9rem; }
     .home-content .info-box { max-width: 120px; gap: 0.3rem; }
     .home-content .info-box i { font-size: 1.1rem; }
     .home-content .info-box span { font-size: 0.85rem; }
-    .social-icons { width: 100px; gap: 0.4rem; margin-top: 0.7rem; }
-    .social-icons a { width: 22px; height: 22px; font-size: 0.9rem; }
+    .social-icons { margin-left: 35%; width: 150px; gap: 0.4rem; margin-top: 0.7rem; }
+    .social-icons a { width: 28px; height: 28px; font-size: 0.9rem; }
     .port-content h3 { font-size: 0.9rem; }
     .contact-form form { padding: 1rem; }
     .services-container { grid-template-columns: 1fr; gap: 1rem; }
     .service-box { padding: 1rem; }
-    .about-img img { max-width: 120px; }
+    .img-about img { width: 200px !important; }
     .about-text h3 { font-size: 1rem; }
     .about-text p { font-size: 0.8rem; }
     .admin-title { font-size: 1.1rem; }
@@ -2363,6 +2370,7 @@ main {
     .admin-table th:nth-child(2), .admin-table td:nth-child(2) { width: 30%; }
     .admin-table th:nth-child(3), .admin-table td:nth-child(3) { width: 20%; }
     .admin-table th:last-child, .admin-table td:last-child { width: 30%; }
+    .social-icons { margin-left: 30%; justify-content: center; width: 220px; }
 }
 
 /* Extra small devices (max-width: 480px) */
@@ -2380,7 +2388,7 @@ main {
     .home-content .info-box span { font-size: 0.85rem; }
     section { padding: 40px 2%; }
     .heading { font-size: 1.1rem; }
-    .home-img, .home-img .img-box { max-width: 100px; }
+    .home-img, .home-img .img-box { max-width: 200px; }
     .home-img .img-box img { border-radius: 6px; }
     .home-img .liquid-shape { transform: scale(0.6); }
     .home-img .liquid-shape:nth-child(2) { transform: scale(0.8); opacity: 0.2; }
@@ -2388,6 +2396,7 @@ main {
     .port-box { height: 90px; }
     .contact-container { grid-template-columns: 1fr; gap: 1rem; }
     .contact-form input, .contact-form textarea { padding: 0.5rem; font-size: 0.7rem; }
+    .social-icons { margin-left: 25%; justify-content: center; width: 220px; }
 }
 
 /* Extra small devices (max-width: 400px) */
@@ -2454,6 +2463,11 @@ main {
     .contact-info .info-box p { font-size: 0.7rem; }
     .contact-form input, .contact-form textarea { padding: 0.3rem; font-size: 0.6rem; }
     .skill-main { grid-template-columns: 1fr; row-gap: 3rem; max-width: 250px; align-items: stretch;}
+    .home-content .btn-box { justify-content: center; margin: 1.2rem auto; gap: 1rem; }
+    .home-content .btn-box a.btn { width: 100%; height: 30px !important; font-size: 0.7rem; }
+    .social-icons { margin-left: 27%; justify-content: center; width: 150px; }
+    .social-icons a { width: 20px; height: 20px; font-size: 0.7rem; }
+
 }
 
 /* Extra extra small devices (max-width: 375px, 320px) */
