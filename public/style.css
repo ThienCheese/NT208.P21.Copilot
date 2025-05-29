@@ -43,6 +43,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
+    
 }
 
 header {
@@ -636,6 +637,7 @@ a.btn:nth-child(2)::before {
 }
 
 /* About Section */
+
 .about {
     display: flex;
     justify-content: center;
@@ -663,45 +665,42 @@ a.btn:nth-child(2)::before {
 }
 
 
-.about-content span {
-    color: #fdfdfd;
-    font-size: .8rem;
-    font-weight: 200;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
+.about-content {
+  flex: 1 1 500px;
+  max-width: 600px;
 }
 
-.about-content h2 {
-    /* display: flex; */
-    color: var(--hover-color);
-    font-size: var(--normal-font);
-    font-weight: 700;
+.about-content .subtitle {
+  color: #f0f0f0;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.about-content .headline {
+  color: var(--hover-color, #00bcd4);
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.about-content .description {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #00bcd4;
+  margin-bottom: 30px;
 }
 
 
-
-.about-content h3 {
-    /* display: flex; */
-    /* color: var(--hover-color); */
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: .2rem;
-
-}
-
-.about-content p {
-    color: #fdfdfd;
-    font-weight: 300;
-    margin-bottom: 1.5rem;
-
-
-}
 .about .img-about img {
     text-align: center;
     position: relative;
-    /* max-width:400pc; */
-    /* height: auto; */
+
 }
 
 .img-about span{
@@ -1015,7 +1014,6 @@ a.btn:nth-child(2)::before {
 
 
 
-/* Thành Công Bắt đầu code */
 /* Portfolio section css ----------*/
 .portfolio {
     background: var(--bg-color);
