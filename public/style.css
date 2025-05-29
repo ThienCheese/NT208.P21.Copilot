@@ -169,11 +169,11 @@ section {
 
 .home-container {
     max-width: 1400px;
-    margin: 0 auto; /* Xóa margin-top */
+    margin: 0 0; /* Xóa margin-top */
     padding: 0 5%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem; /* Giảm gap để tiết kiệm không gian */
+    grid-gap: 1.5rem; /* Giảm gap để tiết kiệm không gian */
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -181,7 +181,7 @@ section {
 }
 
 .home-content {
-    max-width: 600px;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -191,7 +191,7 @@ section {
     padding: 0 1rem; /* Thêm padding để tránh nội dung sát cạnh màn hình */
     width: 100%; /* Đảm bảo chiều rộng đầy đủ */
 }
-
+.home-content p {font-size: 1rem;}
 .home-content h1 {
     font-size: var(--big-font);
     font-weight: 700;
@@ -219,7 +219,7 @@ section {
     vertical-align: top;
     align-items: center;
     font-size: var(--big-font);
-    margin: 0;
+    top: -7px;
 }
 
 .summary h3:first-child {
@@ -2144,7 +2144,7 @@ main {
 
 /* Extra large devices (min-width: 1400px) */
 @media (min-width: 1400px) {
-    header { padding: 1.8rem 12%; }
+    header { padding: 1.8rem 5%; }
     .navlist { gap: 2rem; }
     .navlist a { padding: 0.5rem 1rem; }
     .navlist a.nav-btn { padding: 0.5rem 1.2rem; }
@@ -2157,7 +2157,7 @@ main {
     :root { --big-font: 2.5rem; --normal-font: 1.8rem; --h2-font: 2.5rem; }
     .portfolio-gallery { grid-template-columns: repeat(3, 1fr); padding: 0 2rem; }
     header { padding: 1.5rem 7%; }
-    section { padding: 80px 5%; }
+    section { padding: 80px 25%; }
     .home { grid-gap: 2rem; }
     .home-content, .home-content .info-box, .home-content .btn-box, .social-icons, .summary { text-align: left; align-items: flex-start; justify-content: flex-start; margin-left: 0;}
     .navlist { gap: 1rem; }
@@ -2300,6 +2300,7 @@ main {
 /* Small devices (max-width: 600px) */
 @media (max-width: 600px) {
     :root { --big-font: 1.8rem; --normal-font: 1.1rem; --h2-font: 1.5rem; }
+    section { margin-bottom: 2rem; margin-top: 2rem;}
     .about { flex-direction: column; padding: 30px 3% 20px; gap: 1rem; }
     .about .img-about { max-width: 200px; }
     .about-content h2 { font-size: 1.1rem; }
@@ -2314,7 +2315,8 @@ main {
     .summary h3, .summary .word { font-size: 1.3rem; }
     .info-box { gap: 0.2rem; font-size: 0.85rem; max-width: 120px; }
     .info-box i { font-size: 1.5rem !important; margin-right: 0.1rem; width: 32px !important; }
-    .info-box span { font-size: 1.5rem !important; }
+    .info-box span { font-size: 1.2rem !important; }
+    .phone-info span { font-size: 1.2rem !important; }
     .btn-box { gap: 0.2rem; max-width: 100px; }
     .btn-box .btn { font-size: 0.85rem !important; height: 32px !important; padding: 0.3rem 0; max-width: 120px; }
     .home-content .btn-box { justify-content: center; margin: 1.2rem auto; gap: 1rem; }
@@ -2335,20 +2337,20 @@ main {
     .navlist.active { top: 45px; padding: 0.7rem 3%; }
     .home { padding-top: 90px; }
     .home-container { padding: 0 2%; margin-top: 10px; }
-    .home-img, .home-img .img-box { max-width: 250px; }
+    .home-img, .home-img .img-box { max-width: 200px; }
     .home-img .img-box img { border-radius: 8px; }
     .home-img .liquid-shape { transform: scale(1); }
     .home-content h1 { font-size: 1.2rem; margin-bottom: 0.3rem; }
     .summary { font-size: 0.9rem; margin-bottom: 0.5rem; }
-    .summary h3 { font-size: 1.1rem; height: 1.5rem; }
+    .summary h3 { font-size: 1.1rem; height: 1.1rem; }
     .summary h3:first-child { min-width: 2rem; }
-    .home-content p { font-size: 0.85rem; margin: 0.2rem 0; }
+    .summary span { font-size: 1.1rem; }
+    .home-content p { font-size: 0.74rem; margin: 0 0; }
     .home-content .btn-box { flex-direction: column; gap: 0.9rem; max-width: 150px; }
     .btn-box a.btn { width: 100%; height: 35px !important; font-size: 0.9rem; }
     .home-content .info-box { max-width: 120px; gap: 0.3rem; }
     .home-content .info-box i { font-size: 1.1rem; }
-    .home-content .info-box span { font-size: 0.85rem; }
-    .social-icons { margin-left: 35%; width: 150px; gap: 0.4rem; margin-top: 0.7rem; }
+    .home-content .info-box span { font-size: 1.2rem !important; width: 200px;}
     .social-icons a { width: 28px; height: 28px; font-size: 0.9rem; }
     .port-content h3 { font-size: 0.9rem; }
     .contact-form form { padding: 1rem; }
@@ -2369,7 +2371,7 @@ main {
     .admin-table th:nth-child(2), .admin-table td:nth-child(2) { width: 30%; }
     .admin-table th:nth-child(3), .admin-table td:nth-child(3) { width: 20%; }
     .admin-table th:last-child, .admin-table td:last-child { width: 30%; }
-    .social-icons { margin-left: 30%; justify-content: center; width: 220px; }
+    .social-icons { margin-left: 35.5%; justify-content: center; width: 150px; gap: 0.4rem; margin-top: 0.7rem; }
 }
 
 /* Extra small devices (max-width: 480px) */
