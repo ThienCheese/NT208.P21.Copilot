@@ -682,7 +682,7 @@ a.btn:nth-child(2)::before {
 
 .about-content .headline {
   color: var(--hover-color, #00bcd4);
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -2170,7 +2170,7 @@ main {
 @media (max-width: 991px) {
     :root { --big-font: 2.2rem; --normal-font: 1.6rem; --h2-font: 2.2rem; }
     header { padding: 1.5rem 5%; }
-    section { padding: 60px 0px; margin-bottom: 5rem; }
+    section { padding: 60px 0px; margin-bottom: 1rem; }
     .logo { font-size: 2.5rem; }
 
     .home { grid-template-columns: 1fr; text-align: center; padding-top: 150px; }
