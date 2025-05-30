@@ -466,7 +466,7 @@ a.btn:nth-child(2)::before {
     width: 100%;
     height: 100%;
     top: 5%;
-    filter: blur(70px);
+    filter: blur(30px);
     opacity: 0.5;
     transform: scale(1.5);
 }
@@ -805,7 +805,7 @@ a.btn:nth-child(2)::before {
     z-index: 1;
 }
 
-.skill-tags span:hover {
+.skill-bar span:hover {
     color: var(--second-bg-color);
     transform: translateY(-3px);
     box-shadow: 0 0 25px var(--hover-color);
@@ -2478,8 +2478,8 @@ main {
     .logo { font-size: 0.8rem; }
     #menu-icon { font-size: 0.7rem; padding: 0.1rem 0.2rem; margin-left: 0.1rem; }
     .navlist.active { top: 30px; padding: 0.4rem 2%; }
-    .home { padding-top: 40px; }
-    .home-img, .home-img .img-box { max-width: 40px; }
+    .home { padding-top: 10px; }
+    .home-img, .home-img .img-box { max-width: 150px; }
     .home-img .img-box img { border-radius: 3px; box-shadow: 0 0 3px rgba(18,247,255,0.1); }
     .home-content h1 { font-size: 0.7rem; }
     .summary h3 { font-size: 0.7rem; }
@@ -2487,8 +2487,10 @@ main {
     .social-icons { width: 30px; }
     .social-icons a { width: 10px; height: 10px; font-size: 0.7rem; }
     .skill-tags span { font-size: 0.5rem; padding: 0.2rem 0.4rem; margin: 0.1rem; }
-    .about .skills { padding: 0.5rem; }
+    .about .skills { padding: 0rem; }
     .skills h4 { font-size: 0.7rem; }
+    .social-icons { margin-left: 25%; justify-content: center; width: 150px; }
+    .social-icons a { width: 20px; height: 20px; font-size: 0.7rem; }
 }
 @media (max-width: 320px) {
     header { padding: 0.2rem 1%; min-height: 20px; }
@@ -2496,4 +2498,7 @@ main {
     #menu-icon { font-size: 0.6rem; padding: 0.1rem 0.2rem; margin-left: 0.1rem; }
     .navlist.active { top: 20px; padding: 0.3rem 1%; }
     .home { padding-top: 20px; }
+    .social-icons { margin-left: 21%; justify-content: center; width: 150px; }
+    .social-icons a { width: 20px; height: 20px; font-size: 0.7rem; }
+    .headline {font-size: 1rem !important;}
 }
