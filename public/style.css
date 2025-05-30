@@ -643,7 +643,7 @@ a.btn:nth-child(2)::before {
     justify-content: center;
     align-items: center;
     padding: 100px 10% 90px; 
-    grid-gap:2em;
+    grid-gap:2rem;
     background: var(--secon-bg-color);
 }
 
